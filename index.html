@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infanty - Suplemento Infantil Premium | Crescimento Saudável</title>
+    <meta name="description" content="Infanty é um suplemento infantil premium com cálcio, ostras e vitaminas essenciais para o desenvolvimento saudável das crianças. 100% natural e aprovado pela ANVISA.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #fef2f2 0%, #fed7aa 100%);
+        }
+        .product-shadow {
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="border-b border-gray-100 py-2">
+                <div class="flex justify-between items-center text-sm text-gray-600">
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-phone w-4 h-4"></i>
+                            <span>(34) 9212-9006</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-envelope w-4 h-4"></i>
+                            <span>Vendasnaturaisbr@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:block">
+                        <span>Produto 100% Natural | Registro ANVISA</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-4">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <h1 class="text-2xl font-bold text-gray-900">infinity</h1>
+                    </div>
+
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#inicio" class="text-gray-700 hover:text-red-600 transition-colors">Início</a>
+                        <a href="#beneficios" class="text-gray-700 hover:text-red-600 transition-colors">Benefícios</a>
+                        <a href="#informacoes" class="text-gray-700 hover:text-red-600 transition-colors">Informações</a>
+                        <a href="#contato" class="text-gray-700 hover:text-red-600 transition-colors">Contato</a>
+                        <a href="https://wa.me/553492129006?text=Ol%C3%A1,%20tenho%20interesse%20em%20comprar%20o%20produto%20Infinity%2012" target="_blank">
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg transition-colors">Comprar Agora</button>
+                        </a>
+                    </nav>
+
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                        <i class="fas fa-bars w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <nav id="mobile-menu" class="mobile-menu md:hidden fixed inset-y-0 left-0 bg-white w-64 shadow-lg z-50">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-xl font-bold text-gray-900">Menu</h2>
+                            <button id="close-menu-btn" class="text-gray-600">
+                                <i class="fas fa-times w-6 h-6"></i>
+                            </button>
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <a href="#inicio" class="text-gray-700 hover:text-red-600 transition-colors">Início</a>
+                            <a href="#produto" class="text-gray-700 hover:text-red-600 transition-colors">Produto</a>
+                            <a href="#beneficios" class="text-gray-700 hover:text-red-600 transition-colors">Benefícios</a>
+                            <a href="#informacoes" class="text-gray-700 hover:text-red-600 transition-colors">Informações</a>
+                            <a href="#contato" class="text-gray-700 hover:text-red-600 transition-colors">Contato</a>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg transition-colors w-full">Onde Comprar</button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero-gradient py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 fade-in">
+                    <div class="space-y-4">
+                        <span class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                            ✨ Produto 100% Natural
+                        </span>
+                        <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            infinity 12
+                            <span class="block text-red-600">Suplemento Premium</span>
+                            <span class="block text-2xl lg:text-3xl text-gray-600 font-normal">para o desenvolvimento infantil</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Fórmula especialmente desenvolvida com cálcio, ostras, dolomita e vitaminas essenciais 
+                            para o crescimento saudável e desenvolvimento das crianças.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check w-5 h-5 text-green-600"></i>
+                            <span class="text-gray-700">12 cápsulas de 500mg cada</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check w-5 h-5 text-green-600"></i>
+                            <span class="text-gray-700">Rico em cálcio e minerais essenciais</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check w-5 h-5 text-green-600"></i>
+                            <span class="text-gray-700">Fórmula natural e segura</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check w-5 h-5 text-green-600"></i>
+                            <span class="text-gray-700">Registro e aprovação ANVISA</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/553492129006?text=Ol%C3%A1,%20tenho%20interesse%20em%20comprar%20o%20produto%20Infinity%2012" target="_blank">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+                            Comprar Agora
+                        </button>
+                        </div>
+                    </a>
+
+                    <div class="flex flex-wrap items-center gap-6 pt-4 border-t border-gray-200">
+                        <div class="text-center">
+                            <div class="font-semibold text-gray-900">100%</div>
+                            <div class="text-sm text-gray-600">Natural</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-semibold text-gray-900">ANVISA</div>
+                            <div class="text-sm text-gray-600">Aprovado</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-semibold text-gray-900">1000+</div>
+                            <div class="text-sm text-gray-600">Famílias</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center lg:justify-end fade-in">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-400 to-orange-400 rounded-full blur-3xl opacity-20 scale-110"></div>
+                        <img
+                            src="/imagens/Captura de tela 2025-08-31 111935.png"
+                            alt="Infanty - Suplemento Infantil 500mg"
+                            class="relative z-10 w-[600px] max-w-md h-auto object-contain product-shadow"
+                        />
+                        <div class="absolute -top-4 -right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold transform rotate-12">
+                            Novo!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16 fade-in">
+                <span class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Benefícios Comprovados
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                    Por que escolher o infinity?
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Desenvolvido especialmente para atender às necessidades nutricionais das crianças, 
+                    proporcionando um crescimento saudável e desenvolvimento adequado.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-0 fade-in">
+                    <div class="p-8 text-center space-y-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 text-red-600">
+                            <i class="fas fa-heart text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">Desenvolvimento Saudável</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Contribui para o crescimento adequado e desenvolvimento físico das crianças
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-0 fade-in">
+                    <div class="p-8 text-center space-y-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 text-blue-600">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">Fortalece a Imunidade</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Rica em nutrientes que ajudam a fortalecer o sistema imunológico infantil
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-0 fade-in">
+                    <div class="p-8 text-center space-y-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 text-yellow-600">
+                            <i class="fas fa-bolt text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">Mais Energia</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Fornece energia natural para as atividades diárias e brincadeiras
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-0 fade-in">
+                    <div class="p-8 text-center space-y-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 text-green-600">
+                            <i class="fas fa-users text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">Aprovado por Pediatras</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Recomendado por profissionais de saúde especializados em pediatria
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-0 fade-in">
+                    <div class="p-8 text-center space-y-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 text-purple-600">
+                            <i class="fas fa-baby text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">Seguro para Crianças</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Fórmula especialmente desenvolvida para ser segura e eficaz para crianças
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg border-0 fade-in">
+                    <div class="p-8 text-center space-y-4">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-50 text-orange-600">
+                            <i class="fas fa-sparkles text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-900">100% Natural</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Produzido com ingredientes naturais, sem aditivos químicos prejudiciais
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 bg-gradient-to-r from-red-600 to-orange-600 rounded-2xl p-8 lg:p-12 text-white fade-in">
+                <div class="grid md:grid-cols-4 gap-8 text-center">
+                    <div class="space-y-2">
+                        <div class="text-3xl lg:text-4xl font-bold">1000+</div>
+                        <div class="text-red-100">Famílias Satisfeitas</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-3xl lg:text-4xl font-bold">98%</div>
+                        <div class="text-red-100">Taxa de Aprovação</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-3xl lg:text-4xl font-bold">5★</div>
+                        <div class="text-red-100">Avaliação Média</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-3xl lg:text-4xl font-bold">100%</div>
+                        <div class="text-red-100">Natural e Seguro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="informacoes" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16 fade-in">
+                <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Informações Técnicas
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                    Conheça o Produto
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Transparência total sobre a composição e benefícios do Infanty. 
+                    Todas as informações que você precisa saber.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+                <div class="flex justify-center fade-in">
+                    <div class="relative">
+                        <img
+                            src="/imagens/Captura de tela 2025-08-31 111935.png"
+                            alt="Infanty - Informações do Produto"
+                            class="w-[600px] max-w-sm h-auto object-contain"
+                        />
+                        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg px-4 py-2">
+                            <div class="text-center">
+                                <div class="font-semibold text-gray-900">12 Cápsulas</div>
+                                <div class="text-sm text-gray-600">500mg cada</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 fade-in">
+                    <div class="bg-white rounded-lg shadow-sm">
+                        <div class="flex border-b">
+                            <button class="tab-btn flex-1 px-4 py-3 text-sm font-medium bg-gray-50 text-gray-900 border-b-2 border-red-600" data-tab="composicao">
+                                Composição
+                            </button>
+                            <button class="tab-btn flex-1 px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700" data-tab="modo-uso">
+                                Modo de Uso
+                            </button>
+                            <button class="tab-btn flex-1 px-4 py-3 text-sm font-medium text-gray-500 hover:text-gray-700" data-tab="especificacoes">
+                                Especificações
+                            </button>
+                        </div>
+
+                        <div class="p-6">
+                            <div id="composicao" class="tab-content active">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <i class="fas fa-file-text text-blue-600"></i>
+                                    <h3 class="font-semibold text-gray-900">Informação Nutricional</h3>
+                                </div>
+                                <div class="text-sm text-gray-600 mb-4">
+                                    Porção: 1 cápsula (500mg)
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-sm">
+                                        <thead>
+                                            <tr class="border-b">
+                                                <th class="text-left py-2">Nutriente</th>
+                                                <th class="text-right py-2">Quantidade</th>
+                                                <th class="text-right py-2">%VD*</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-b">
+                                                <td class="py-2">Cálcio (de Ostras)</td>
+                                                <td class="text-right py-2">200mg</td>
+                                                <td class="text-right py-2">25%</td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="py-2">Magnésio (Dolomita)</td>
+                                                <td class="text-right py-2">150mg</td>
+                                                <td class="text-right py-2">36%</td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="py-2">Vitamina D3</td>
+                                                <td class="text-right py-2">10mcg</td>
+                                                <td class="text-right py-2">50%</td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="py-2">Vitamina K2</td>
+                                                <td class="text-right py-2">45mcg</td>
+                                                <td class="text-right py-2">60%</td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="py-2">Zinco</td>
+                                                <td class="text-right py-2">5mg</td>
+                                                <td class="text-right py-2">50%</td>
+                                            </tr>
+                                            <tr class="border-b">
+                                                <td class="py-2">Fósforo</td>
+                                                <td class="text-right py-2">100mg</td>
+                                                <td class="text-right py-2">14%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-4">
+                                    * Valores Diários com base em uma dieta de 2.000 kcal ou 8.400 kJ.
+                                </div>
+                            </div>
+
+                            <div id="modo-uso" class="tab-content">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <i class="fas fa-info-circle text-blue-600"></i>
+                                    <h3 class="font-semibold text-gray-900">Como Usar</h3>
+                                </div>
+                                <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                    <h4 class="font-semibold text-blue-900 mb-2">Dosagem Recomendada</h4>
+                                    <p class="text-blue-800">
+                                        <strong>Crianças de 2 a 6 anos:</strong> 1 cápsula ao dia<br />
+                                        <strong>Crianças acima de 6 anos:</strong> 2 cápsulas ao dia
+                                    </p>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex gap-3">
+                                        <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-red-600 font-semibold text-sm">1</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-semibold">Administre com líquido</h5>
+                                            <p class="text-gray-600 text-sm">Ofereça a cápsula com água, suco ou leite de preferência da criança.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-3">
+                                        <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-red-600 font-semibold text-sm">2</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-semibold">Horário recomendado</h5>
+                                            <p class="text-gray-600 text-sm">Preferencialmente durante as refeições para melhor absorção.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-3">
+                                        <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <span class="text-red-600 font-semibold text-sm">3</span>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-semibold">Uso contínuo</h5>
+                                            <p class="text-gray-600 text-sm">Para melhores resultados, utilize diariamente conforme orientação.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="especificacoes" class="tab-content">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <i class="fas fa-box text-blue-600"></i>
+                                    <h3 class="font-semibold text-gray-900">Especificações do Produto</h3>
+                                </div>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div class="space-y-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Apresentação</div>
+                                            <div class="text-gray-600">Frasco com 12 cápsulas</div>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Peso por cápsula</div>
+                                            <div class="text-gray-600">500mg</div>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Tipo de cápsula</div>
+                                            <div class="text-gray-600">Gelatina dura</div>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Validade</div>
+                                            <div class="text-gray-600">24 meses</div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-3">
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Registro ANVISA</div>
+                                            <div class="text-gray-600">Produto registrado</div>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Origem</div>
+                                            <div class="text-gray-600">Nacional</div>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Armazenamento</div>
+                                            <div class="text-gray-600">Local seco e arejado</div>
+                                        </div>
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Faixa etária</div>
+                                            <div class="text-gray-600">A partir de 2 anos</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+                                    <h5 class="font-semibold text-yellow-800 mb-2">⚠️ Contraindicações</h5>
+                                    <p class="text-yellow-700 text-sm">
+                                        Não recomendado para crianças menores de 2 anos. Consulte um pediatra antes de iniciar o uso. 
+                                        Mantenha fora do alcance de crianças pequenas.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center space-y-4 mb-16 fade-in">
+                <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Entre em Contato
+                </span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">
+                    Onde Encontrar o Infanty
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <div class="lg:col-span-2 bg-white shadow-lg rounded-lg fade-in">
+                    <div class="p-6 border-b">
+                        <h3 class="font-semibold text-gray-900 flex items-center gap-2">
+                            <i class="fas fa-shopping-cart text-red-600"></i>
+                            Opções de Compra
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-red-50 p-6 rounded-lg border border-red-100">
+                                <h4 class="font-semibold text-red-900 mb-3">Entrega Rápida</h4>
+                                <div class="space-y-2 text-sm text-red-800">
+                                    <div>• Goiânia</div>
+                                    <div>• Aparecida de Goiânia</div>
+                                    <div>• Trindade</div>
+                                    <div>• anapolis</div>
+                                    <div>• Senador Canedo</div>
+                                </div>
+                                <button class="w-full mt-4 border border-red-300 text-red-700 hover:bg-red-50 px-4 py-2 rounded-lg transition-colors">
+                                    Compre Agora
+                                </button>
+                            </div>
+
+                            <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+                                <h4 class="font-semibold text-blue-900 mb-3">🌐 Mercado livre</h4>
+                                <div class="space-y-2 text-sm text-blue-800">
+                                    <div>• Compra fácil e rápida</div>
+                                    <div>• Pagamento 100% seguro</div>
+                                    <div>• Envio imediato</div>
+                                    <div>• Entrega para todo o Brasil</div>
+                                    <div>• Suporte dedicado ao cliente</div>
+                                </div>
+                                <button class="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                    Comprar Online
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-green-600 to-blue-600 p-6 rounded-lg text-white">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-semibold mb-2">💰 Preço Médio: R$ 29,90</h4>
+                                    <p class="text-green-100 text-sm">*Preços podem variar conforme a região e farmácia</p>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-bold">12</div>
+                                    <div class="text-sm text-green-100">cápsulas</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg fade-in">
+                    <div class="p-6 border-b">
+                        <h3 class="font-semibold text-gray-900 flex items-center gap-2">
+                            <i class="fas fa-comment text-red-600"></i>
+                            Fale Conosco
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-phone text-red-600 mt-1"></i>
+                                <div>
+                                    <div class="font-semibold">Telefone</div>
+                                    <div class="text-gray-600 text-sm">(34) 9212-9006</div>
+                                    <div class="text-gray-500 text-xs">WhatsApp disponível</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-envelope text-red-600 mt-1"></i>
+                                <div>
+                                    <div class="font-semibold">E-mail</div>
+                                    <div class="text-gray-600 text-sm">Vendasnaturaisbr@gmail.com</div>
+                                    <div class="text-gray-500 text-xs">Resposta em até 24h</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-clock text-red-600 mt-1"></i>
+                                <div>
+                                    <div class="font-semibold">Atendimento</div>
+                                    <div class="text-gray-600 text-sm">Seg - Sex: 8h às 18h</div>
+                                    <div class="text-gray-500 text-xs">Sáb: 8h às 12h</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i class="fas fa-map-marker-alt text-red-600 mt-1"></i>
+                                <div>
+                                    <div class="font-semibold">Endereço</div>
+                                    <div class="text-gray-600 text-sm">Goiania, GO</div>
+                                    <div class="text-gray-500 text-xs">Distribuição nacional</div>
+                                </div>
+                            </div>                           
+
+                        </div>
+
+                        <a href="https://wa.me/553492129006?text=Ol%C3%A1,%20tenho%20interesse%20em%20comprar%20o%20produto%20Infinity%2012" target="_blank">
+                            <button class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                WhatsApp
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://wa.me/553492129006?text=Ol%C3%A1,%20tenho%20interesse%20em%20comprar%20o%20produto%20Infinity%2012" target="_blank">
+                <div class="flex justify-center">
+                    <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg transition-colors">Comprar Agora</button>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">infinity</h3>
+                        <p class="text-gray-400">Suplemento Premium</p>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Com ingredientes naturais e aprovação ANVISA.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="inline-block bg-green-800 text-green-100 px-2 py-1 rounded text-xs">
+                            <i class="fas fa-shield-alt mr-1"></i>
+                            ANVISA
+                        </span>
+                        <span class="inline-block bg-blue-800 text-blue-100 px-2 py-1 rounded text-xs">
+                            <i class="fas fa-award mr-1"></i>
+                            100% Natural
+                        </span>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-white">Links Rápidos</h4>
+                    <div class="space-y-2">
+                        <a href="#inicio" class="block text-gray-300 hover:text-white transition-colors text-sm">Início</a>
+                        <a href="#produto" class="block text-gray-300 hover:text-white transition-colors text-sm">Sobre o Produto</a>
+                        <a href="#beneficios" class="block text-gray-300 hover:text-white transition-colors text-sm">Benefícios</a>
+                        <a href="#informacoes" class="block text-gray-300 hover:text-white transition-colors text-sm">Informações Técnicas</a>
+                        <a href="#contato" class="block text-gray-300 hover:text-white transition-colors text-sm">Contato</a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-white">Contato</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-phone text-red-400"></i>
+                            <span class="text-gray-300">(34) 9212-9006</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-envelope text-red-400"></i>
+                            <span class="text-gray-300">Vendasnaturaisbr@gmail.com</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-sm">
+                            <i class="fas fa-map-marker-alt text-red-400 mt-0.5"></i>
+                            <span class="text-gray-300">Goiania, GO<br />Distribuição Nacional</span>
+                        </div>
+                        <div class="flex items-start gap-3 text-sm">
+                            <i class="fas fa-clock text-red-400 mt-0.5"></i>
+                            <span class="text-gray-300">Seg - Sex: 8h às 18h<br />Sáb: 8h às 12h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-white">Informações Importantes</h4>
+                    <div class="space-y-2 text-sm text-gray-300">
+                        <p>✓ Produto registrado na ANVISA</p>
+                        <p>✓ Fórmula 100% natural</p>
+                        <p>✓ Sem corantes artificiais</p>
+                        <p>✓ Sem conservantes químicos</p>
+                        <p>✓ Aprovado por pediatras</p>
+                    </div>
+                    <div class="bg-gray-800 p-3 rounded-lg">
+                        <p class="text-xs text-gray-400">
+                            <strong class="text-yellow-400">⚠️ Importante:</strong> Consulte sempre um pediatra antes de iniciar qualquer suplementação infantil.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 my-8"></div>
+
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-sm text-gray-400">
+                    © 2025 Infanty. Todos os direitos reservados.
+                </div>
+                
+                <div class="flex flex-wrap gap-4 text-xs text-gray-400">
+                    <span>Política de Privacidade</span>
+                    <span>•</span>
+                    <span>Termos de Uso</span>
+                    <span>•</span>
+                    <span>Política de Cookies</span>
+                    <span>•</span>
+                    <span>SAC</span>
+                </div>
+            </div>
+
+            <div class="mt-8 p-4 bg-gray-800 rounded-lg">
+                <p class="text-xs text-gray-400 text-center leading-relaxed">
+                    <strong>AVISO LEGAL:</strong> As informações contidas neste site não substituem o aconselhamento médico. 
+                    O Infanty é um suplemento alimentar e não deve ser usado como substituto de uma dieta equilibrada. 
+                    Consulte sempre um profissional de saúde qualificado antes de iniciar qualquer suplementação, 
+                    especialmente em crianças. Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+        });
+
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                tabBtns.forEach(b => {
+                    b.classList.remove('bg-gray-50', 'text-gray-900', 'border-b-2', 'border-red-600');
+                    b.classList.add('text-gray-500');
+                });
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                btn.classList.add('bg-gray-50', 'text-gray-900', 'border-b-2', 'border-red-600');
+                btn.classList.remove('text-gray-500');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+    </script>
+</body>
+</html>
